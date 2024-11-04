@@ -1,0 +1,38 @@
+.ip-container{
+  display: flex;
+  flex-direction: row;
+  margin-top: 28px;
+  margin-left: 37px;
+}
+
+.toptext,
+.bottomtext{
+  font-size: 14px;
+}
+
+.top-input,
+.bottom-input{
+  padding: 7.35px 10.64px 7.35px 10.64px;
+  width: 222px;
+  height: 35px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1.4px;
+}
+
+.bottom-ip-container{
+  margin-left: 33px;
+}
+
+.new-meme-button{
+  margin-top: 19px;
+  margin-left: 37px;
+  width: 477px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(45deg, #711F8D 0%, #A818DA 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+}
