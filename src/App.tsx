@@ -1,12 +1,16 @@
 import { useState } from 'react'
+import Header from './components/Header'
+import Input from './components/Input';
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
-    <p>hello</p>
+    <div>
+      <Header />
+      <Input />
+    </div>
   )
 }
 
-export default App
+export default App;
