@@ -23,12 +23,15 @@ export default function Output(){
     }))
   }
 
-  function handleChange(){
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>){
+    const {value, name} = event.target;
+
+    setMeme(prevmeme  => ({
+      ...prevmeme,
+      [name] : value
+    }))
 
   }
-
-
-
   
   return(
     <div className="output">
@@ -43,6 +46,7 @@ export default function Output(){
                 type="text" 
                 placeholder="Shut up"  className="top-input"
                 name="topText"
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -55,6 +59,7 @@ export default function Output(){
                 type="text" 
                 placeholder="and take my money" className="bottom-input"
                 name="bottomText"
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -72,8 +77,8 @@ export default function Output(){
 
       <div className="meme-image-container">
         <img src={meme.randomImage} className="meme-edit"/>
-        <div className="text-overlay top-text">Shut up</div>
-        <div className="text-overlay bottom-text">And take my money</div>
+        <div className="text-overlay top-text">{meme.topText}</div>
+        <div className="text-overlay bottom-text">{meme.bottomText}</div>
       </div>
 
     </div>
