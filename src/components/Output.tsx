@@ -31,7 +31,7 @@ export default function Output(){
 
   
   return(
-    <div>
+    <div className="output">
       <div className="meme-input-container">
         <div className="ip-container">
           <div className="top-ip-container">
@@ -39,7 +39,11 @@ export default function Output(){
               <label className="toptext">Top text</label>
             </div>
             <div>
-              <input type="text" placeholder="Shut up"  className="top-input"/>
+              <input 
+                type="text" 
+                placeholder="Shut up"  className="top-input"
+                name="topText"
+              />
             </div>
           </div>
           <div className="bottom-ip-container">
@@ -47,23 +51,31 @@ export default function Output(){
               <label className="bottomtext">Bottom text</label>
             </div>
             <div>
-              <input type="text" placeholder="and take my money" className="bottom-input"/>
+              <input 
+                type="text" 
+                placeholder="and take my money" className="bottom-input"
+                name="bottomText"
+              />
             </div>
           </div>
-      </div>
+        </div>
 
         <div className="new-meme-button-container">
-          <button className="new-meme-button">
+          <button 
+            className="new-meme-button"
+            onClick={getMemeImage}
+            >
             Get a new meme image 🖼
           </button>
         </div>
       </div>
 
-        <div className="meme-image-container">
-          <img src="images/memeimg.png" className="meme-edit"/>
-          <div className="text-overlay top-text">Shut up</div>
-          <div className="text-overlay bottom-text">And take my money</div>
-        </div>
+      <div className="meme-image-container">
+        <img src={meme.randomImage} className="meme-edit"/>
+        <div className="text-overlay top-text">Shut up</div>
+        <div className="text-overlay bottom-text">And take my money</div>
+      </div>
+
     </div>
   )
   
