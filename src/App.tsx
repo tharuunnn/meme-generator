@@ -1,6 +1,5 @@
-import { useState } from 'react'
 import Header from './components/Header'
-import Input from './components/Input';
+import Output from './components/Output';
 
 
 function App() {
@@ -8,7 +7,7 @@ function App() {
   return (
     <div>
       <Header />
-      <Input />
+      <Output />
     </div>
   )
 }
